@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imgs/U.png">
+    <title>UpImg - 免費且開源的圖床</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- 圓形 -->
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    <div class="shape shape4"></div>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand mx-auto" href="https://upimg.kesug.com">
+                    <img src="imgs/UpImg.png" alt="Logo" height="50">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container container-center">
+        <div>
+            <h1 class="mb-4 heading">
+                <span class="full-line">上傳圖片，與您的好友分享</span>
+                <span class="line-break">上傳圖片<br>與您的好友分享</span>
+            </h1>
+            <h5>
+                <span>圖片大小限制為 10MB</span>
+            </h5>
+            <br>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#uploadModal">
+                上傳圖片
+            </button>
+        </div>
+    </div>
+
+    <!-- 互動視窗 -->
+    <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="uploadModalLabel">上傳圖片</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="image">請選擇圖片 <span class="text-danger">*</span></label>
+                            <div class="input-group mb-3">
+                                <input type="file" class="form-control" name="image" id="image" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">附上圖片描述</label>
+                            <textarea name="description" class="form-control" id="description" rows="4"></textarea>
+                        </div>
+                        <input type="hidden" name="submit" value="submit">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" onclick="removeFile()">移除檔案</button>
+                    <button type="submit" form="uploadForm" class="btn btn-warning">上傳</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function removeFile() {
+            document.getElementById('image').value = "";
+        }
+
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
+            if (message) {
+                alert(decodeURIComponent(message));
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>

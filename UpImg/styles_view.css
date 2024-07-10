@@ -1,0 +1,16 @@
+body {
+    background-color: #ffffff;
+}
+.container-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 56px); /* 減去nav的高度 */
+    text-align: center;
+}
+.copy-btn {
+    cursor: pointer;
+}
+.text-center {
+    font-weight: bold;
+}
