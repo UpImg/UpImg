@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://upimg.kesug.com" target="_blank">
-    <img src="https://upimg.kesug.com/imgs/UpImg.png" alt="UpImg 圖標" hight="160"/>
+    <img src="https://i.imgur.com/nviymd9.png" alt="UpImg 圖標" hight="160"/>
   </a>
 </p>
 
