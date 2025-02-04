@@ -8,7 +8,7 @@
 
 一個免費且開源的圖片分享平台，使用 InfinityFree 作為網站託管服務。
 
-[UpImg 圖床](https://upimg.kesug.com)
+[UpImg 圖床網站](https://upimg.kesug.com)
 
 ---
 
