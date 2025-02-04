@@ -1,14 +1,14 @@
 # UpImg 圖床網站
 
 <p align="center">
-  <a href="https://upimg.kesug.com" target="_blank">
+  <a href="https://upimg.jrytw.com" target="_blank">
     <img src="https://i.imgur.com/nviymd9.png" alt="UpImg 圖標" hight="160"/>
   </a>
 </p>
 
 一個免費且開源的圖片分享平台，使用 InfinityFree 作為網站託管服務。
 
-[UpImg 圖床網站](https://upimg.kesug.com)
+[UpImg 圖床網站](https://upimg.jrytw.com)
 
 ---
 
